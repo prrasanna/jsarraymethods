@@ -88,5 +88,3 @@ const displayFindIndexPackageId = (packageId) => {
 };
 
 console.log(displayFindIndexPackageId(101));
-
-//doubt

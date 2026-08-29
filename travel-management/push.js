@@ -88,16 +88,13 @@ console.log(addActivity(travelPackages[0]));*/
 
 const addActivity = (packageId, activity) => {
     const activitiesPush = travelPackages.findIndex((travelPackage) => travelPackage.packageId === packageId);
-
-    if (activitiesPush !== -1 ) {
-        const activityIndex = travelPackages[activitiesPush].activities.indexOf(activity); //find boat ride index
-
-            if (activityIndex === -1) {                                             //-1 === -1 --> true
-                travelPackages[activitiesPush].activities.push(activity);
+        if (activitiesPush !== -1 ) {
+            const activityIndex = travelPackages[activitiesPush].activities.indexOf(activity); //find boat ride index
+                if (activityIndex === -1) {                                             //-1 === -1 --> true
+                    travelPackages[activitiesPush].activities.push(activity);
         }
     }
 };
 
 addActivity(102, "Boat Ride");
-
 console.log(travelPackages);
